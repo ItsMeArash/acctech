@@ -22,7 +22,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
               <div
                 className={`rounded-xl flex items-center justify-center p-2 ${
                   isActive
-                    ? 'bg-blue-100 text-gray-900 w-full'
+                    ? 'bg-[#FAFAFA] text-gray-900 w-full'
                     : 'text-gray-800/95  w-full'
                 }`}
               >

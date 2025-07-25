@@ -13,7 +13,7 @@ export function DesktopNavbar() {
 
   return (
     <motion.aside
-      className="bg-[#FFFFFF] border border-gray-200/90 rounded-xl py-6 overflow-hidden"
+      className="bg-[#FFFFFF] border border-gray-200/90 py-6 overflow-hidden"
       initial="expanded"
       animate={isCollapsed ? 'collapsed' : 'expanded'}
       variants={sidebarVariants}
@@ -23,8 +23,7 @@ export function DesktopNavbar() {
         <div
           className={`flex items-center pb-4 px-4 ${isCollapsed ? 'justify-center' : 'justify-between'}`}
         >
-          <div className="flex gap-2 items-center">
-            {!isCollapsed && (
+          {!isCollapsed && (<div className="flex gap-2 items-center">
               <motion.img
                 src="/assets/images/logo.png"
                 alt="site logo"
@@ -34,9 +33,8 @@ export function DesktopNavbar() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
               />
-            )}
             <p className="text-sm font-bold">نام شرکت یا مجموعه</p>
-          </div>
+          </div>)}
           <button
             className="rounded-full hover:bg-gray-200/90"
             onClick={toggleSidebar}
