@@ -17,10 +17,10 @@ const BaseIcon: React.FC<SvgIcon> = ({
       viewBox={viewBox}
       strokeWidth={strokeWidth}
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      // fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
-      stroke={color}
+      // stroke={color}
       {...rest}
     >
       {children}

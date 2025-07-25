@@ -45,7 +45,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
             <div
               className={`flex items-center p-4 rounded-xl active:outline-none justify-start gap-4 h-[57px] text-base font-medium ${
                 isActive
-                  ? 'bg-[#FAFAFA] text-[#1167B2] w-full'
+                  ? 'bg-[#FAFAFA] font-bold w-full'
                   : 'text-gray-800/95 hover:bg-gray-200/90 w-full'
               }`}
             >

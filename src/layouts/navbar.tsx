@@ -2,10 +2,10 @@ import { useState } from "react"
 import { sidebarVariants } from "../config/constants"
 import * as motion from "motion/react-client"
 import { NavLink } from "../components/shared/navlink"
-import { IconOrderTracking } from "../components/shared/icons/icons"
+import { IconClose, IconOrderTracking } from "../components/shared/icons/icons"
 
 export function DesktopNavbar() {
-    const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(false)
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed)
@@ -23,25 +23,25 @@ export function DesktopNavbar() {
         <div
           className={`flex items-center pb-4 px-4 ${isCollapsed ? 'justify-center' : 'justify-between'}`}
         >
-          {!isCollapsed && (
-            <motion.img
-              src="/assets/images/logo.png"
-              alt="site logo"
-              className="w-10 h-10"
-              initial={{ opacity: 1 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            />
-          )}
+          <div className="flex gap-2 items-center">
+            {!isCollapsed && (
+              <motion.img
+                src="/assets/images/logo.png"
+                alt="site logo"
+                className="w-10 h-10"
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              />
+            )}
+            <p className="text-sm font-bold">نام شرکت یا مجموعه</p>
+          </div>
           <button
-            // isIconOnly
-            // variant="light"
             className="rounded-full hover:bg-gray-200/90"
             onClick={toggleSidebar}
           >
-            {/* <NavToggleIcon /> */}
-            X
+            <IconClose />
           </button>
         </div>
         <nav className="pt-4 flex-1">
@@ -51,7 +51,7 @@ export function DesktopNavbar() {
             animate={{ opacity: 1 }}
             transition={{ staggerChildren: 0.05, delayChildren: 0.1 }}
           >
-            {[{path: "/", icon: <IconOrderTracking />,label: "پیگیری سفارشات"}].map((item, index) => (
+            {[{ path: "/", icon: <IconOrderTracking fill="none" stroke="currentColor"/>, label: "پیگیری سفارشات" }].map((item, index) => (
               <motion.div
                 key={item.path}
                 initial={{ opacity: 0, x: -20 }}
@@ -74,9 +74,9 @@ export function DesktopNavbar() {
 }
 
 export function MobileNavbar() {
-    return (
-        <div>
-            <h1>MobileNavbar</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1>MobileNavbar</h1>
+    </div>
+  )
 }

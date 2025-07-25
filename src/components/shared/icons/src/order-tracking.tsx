@@ -1,4 +1,3 @@
-import React from "react";
 import BaseIcon from "../base-icon";
 import type {SvgIcon} from "../icon.types";
 
