@@ -49,7 +49,7 @@ export function DesktopNavbar() {
             animate={{ opacity: 1 }}
             transition={{ staggerChildren: 0.05, delayChildren: 0.1 }}
           >
-            {[{ path: "/", icon: <IconOrderTracking fill="none" stroke="currentColor"/>, label: "پیگیری سفارشات" }].map((item, index) => (
+            {[{ path: "/orders-tracking", icon: <IconOrderTracking fill="none" stroke="currentColor"/>, label: "پیگیری سفارشات" }].map((item, index) => (
               <motion.div
                 key={item.path}
                 initial={{ opacity: 0, x: -20 }}

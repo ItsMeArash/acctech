@@ -6,7 +6,7 @@ export function DesktopDashboardLayout() {
     return (
         <div className="w-full min-h-screen flex">
             <DesktopNavbar />
-            <div className="w-full flex flex-col gap-4 px-4">
+            <div className="w-full flex flex-col gap-4">
                 <Header />
                 <Outlet />
             </div>
@@ -16,8 +16,9 @@ export function DesktopDashboardLayout() {
 
 export function MobileDashboardLayout() {
     return (
-        <div className="w-full min-h-screen flex p-4">
+        <div className="w-full min-h-screen p-4">
             <MobileNavbar />
+            <Header />
             <Outlet />
         </div>
     )
