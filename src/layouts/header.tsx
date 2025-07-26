@@ -18,7 +18,7 @@ export default function Header() {
         }
     }
     return (
-        <header className="flex justify-between w-full p-5 dark:bg-[#2B2F3B]">
+        <header className="flex justify-between w-full p-5 dark:bg-[#2B2F3B] max-sm:dark:bg-[#222632]">
             {!isMobile && <ProfileInfo />}
             <div className="flex gap-4 items-center max-sm:justify-between max-sm:grow">
                 <HeaderActions />

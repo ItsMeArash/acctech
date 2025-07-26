@@ -95,7 +95,7 @@ export default function FilterComponent({ onApplyFilters, onClearFilters, initia
 
 
   return (
-    <div className="bg-white dark:bg-[#2B2F3B] dark:text-white w-[280px] h-full max-w-sm border-l border-gray-200 dark:border-[#E9EAEB1F]">
+    <div className="bg-white dark:bg-[#2B2F3B] dark:text-white w-full sm:w-[280px] h-full border-l border-gray-200 dark:border-[#E9EAEB1F]">
       {/* Persistent Header - Always visible */}
       <div
         onClick={togglePanel}

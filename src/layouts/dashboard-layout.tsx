@@ -16,7 +16,7 @@ export function DesktopDashboardLayout() {
 
 export function MobileDashboardLayout() {
     return (
-        <div className="w-full min-h-screen p-4">
+        <div className="w-full min-h-screen dark:bg-[#191D2A]">
             <MobileNavbar />
             <Header />
             <Outlet />

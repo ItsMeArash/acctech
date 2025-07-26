@@ -20,7 +20,7 @@ export default function OrdersTracking() {
     return (
         <main className="h-full">
             <ActiveTabs />
-            <section className="h-[calc(100%-60px)] flex">
+            <section className="sm:h-[calc(100%-60px)] flex max-sm:flex-col">
                 <FilterComponent onApplyFilters={handleApplyFilters} onClearFilters={handleClearFilters} />
                 <Table />
             </section>
