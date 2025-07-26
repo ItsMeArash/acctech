@@ -10,7 +10,7 @@ export default function HeaderActions() {
                 <p className="text-[#1E3A8A]">۱۱:۴۲ ، شنبه ۲۵ اسفند</p>
             </div>
             {!isMobile && (
-                <div className="border-2 border-[#666666] text-[#3D3D3D] flex items-center gap-2 px-3 py-2 rounded-[30px] text-sm">
+                <div className="border-2 border-[#666666] text-[#3D3D3D] dark:text-[#B8B8B8] flex items-center gap-2 px-3 py-2 rounded-[30px] text-sm">
                     <IconAvatar stroke="#fff" strokeWidth={1} fill="#666666" />
                     <p className="">آخرین لاگین : ۴ ساعت قبل</p>
                 </div>
