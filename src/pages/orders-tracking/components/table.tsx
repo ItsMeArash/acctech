@@ -70,12 +70,12 @@ export function Table() {
         <table className="w-full">
           <thead className="bg-gray-50 sticky top-0 z-10">
             <tr className="text-right">
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">شماره سفارش</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">تاریخ سفارش</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">مبلغ سفارش</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">کد تحویل</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">وضعیت سفارش</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider w-12"></th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">شماره سفارش</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">تاریخ سفارش</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">مبلغ سفارش</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">کد تحویل</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">وضعیت سفارش</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center w-12"></th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
@@ -88,19 +88,19 @@ export function Table() {
                       className="flex items-center px-4 py-4 hover:bg-gray-50 cursor-pointer transition-colors"
                       onClick={() => toggleRow(transaction.id)}
                     >
-                      <div className="flex-1 text-right">
+                      <div className="flex-1 text-center">
                         <span className="text-sm text-gray-900">{transaction.number}</span>
                       </div>
-                      <div className="flex-1 text-right">
+                      <div className="flex-1 text-center">
                         <span className="text-sm text-gray-900">{transaction.date}</span>
                       </div>
-                      <div className="flex-1 text-right">
+                      <div className="flex-1 text-center">
                         <span className="text-sm text-gray-900">{transaction.amount}</span>
                       </div>
-                      <div className="flex-1 text-right">
+                      <div className="flex-1 text-center">
                         <span className="text-sm text-gray-900">{transaction.code}</span>
                       </div>
-                      <div className="flex-1 text-right">
+                      <div className="flex-1 text-center">
                         <span
                           className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(transaction.status)}`}
                         >
