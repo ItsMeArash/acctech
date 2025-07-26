@@ -86,7 +86,7 @@ export function MobileNavbar() {
         />
         <h2 className="dark:text-[#EBEBEB] font-semibold">سیستم مدیریت ناوگان</h2>
       </div>
-      <IconMenu stroke="#000" fill="#000"/>
+      <IconMenu stroke="#000" fill="#000" className="dark:invert"/>
     </div>
   )
 }
