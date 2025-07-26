@@ -2,7 +2,7 @@ import { useState } from "react"
 import { sidebarVariants } from "../config/constants"
 import * as motion from "motion/react-client"
 import { NavLink } from "../components/shared/navlink"
-import { IconClose, IconOrderTracking } from "../components/shared/icons/icons"
+import { IconClose, IconMenu, IconOrderTracking } from "../components/shared/icons/icons"
 
 export function DesktopNavbar() {
   const [isCollapsed, setIsCollapsed] = useState(false)
@@ -73,7 +73,7 @@ export function DesktopNavbar() {
 
 export function MobileNavbar() {
   return (
-    <div className="dark:bg-[#2B2F3B] px-3 py-5">
+    <div className="dark:bg-[#2B2F3B] p-5 flex justify-between items-center">
       <div className="flex gap-2 items-center">
         <motion.img
           src="/assets/images/logo.png"
@@ -86,6 +86,7 @@ export function MobileNavbar() {
         />
         <h2 className="dark:text-[#EBEBEB] font-semibold">سیستم مدیریت ناوگان</h2>
       </div>
+      <IconMenu stroke="#000" fill="#000"/>
     </div>
   )
 }

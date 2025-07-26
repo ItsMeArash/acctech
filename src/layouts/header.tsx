@@ -24,7 +24,7 @@ export default function Header() {
                 <HeaderActions />
                 <ul className="flex gap-2">
                     <li onClick={toggleDarkMode}>
-                        <button className="p-2 bg-[#F8F8F8] dark:bg-[#191D2A] rounded-xl"><IconMoon  className="dark:invert"/></button>
+                        <button className="p-2 bg-[#F8F8F8] dark:bg-[#191D2A] rounded-xl cursor-pointer"><IconMoon  className="dark:invert"/></button>
                     </li>
                     <li >
                         <button className="p-2 bg-[#F8F8F8] dark:bg-[#191D2A] rounded-xl"><IconNotification className="dark:invert" stroke="#000" fill="none" /></button>

@@ -62,7 +62,7 @@ export function Table() {
   }
 
   return (
-    <div className="grow dark:bg-[#191D2A]">
+    <div className="grow dark:bg-[#191D2A] z-10">
       {/* Table Container with Fixed Height */}
       <div className="overflow-y-auto">
         <table className="w-full">
