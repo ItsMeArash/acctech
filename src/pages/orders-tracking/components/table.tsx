@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Detail } from "./detail"
+import { TableRowDetail } from "./table-row-detail"
 import { IconCaretDown } from "../../../components/shared/icons/icons"
 
 interface Transaction {
@@ -128,7 +128,7 @@ export function Table() {
                           }}
                           className="overflow-hidden"
                         >
-                            <Detail />
+                            <TableRowDetail />
                         </motion.div>
                       )}
                     </AnimatePresence>

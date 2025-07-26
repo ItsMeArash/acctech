@@ -1,4 +1,4 @@
-export function Detail() {
+export function TableRowDetail() {
     const productDetails = [
         { name: "باتری اوریجینال", code: "۷۴۳۷۴۳", quantity: "۴۲" },
         { name: "باتری سولار", code: "۳۲۴۳۷۴۸", quantity: "۱۷" },
@@ -72,7 +72,7 @@ export function Detail() {
                                 <td className="px-4 py-3 text-sm text-gray-900 dark:text-[#EBEBEB] text-center">{driver.firstName}</td>
                                 <td className="px-4 py-3 text-sm text-gray-900 dark:text-[#EBEBEB] text-center">{driver.lastName}</td>
                                 <td className="px-4 py-3 text-sm text-gray-900 dark:text-[#EBEBEB] text-center">
-                                    <button className="w-3/4 text-white cursor-pointer bg-[#8F8F8F] px-4 py-3 rounded-lg">
+                                    <button className="w-3/5 text-white cursor-pointer bg-[#8F8F8F] px-4 py-3 rounded-lg">
                                         تماس با راننده
                                     </button>
                                 </td>
