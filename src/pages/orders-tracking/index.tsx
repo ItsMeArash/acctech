@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ActiveTabs from "./components/active-tabs";
 import FilterComponent from "./components/filters";
+import { Table } from "./components/table";
 
 export default function OrdersTracking() {
     const [appliedFilters, setAppliedFilters] = useState<any>(null)
@@ -20,8 +21,9 @@ export default function OrdersTracking() {
     return (
         <main className="h-full">
             <ActiveTabs />
-            <section className="h-[calc(100%-60px)]">
+            <section className="h-[calc(100%-60px)] flex">
                 <FilterComponent onApplyFilters={handleApplyFilters} onClearFilters={handleClearFilters} />
+                <Table />
             </section>
         </main>
     )
