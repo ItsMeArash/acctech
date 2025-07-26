@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Detail } from "./detail"
@@ -64,41 +62,41 @@ export function Table() {
   }
 
   return (
-    <div className="grow">
+    <div className="grow dark:bg-[#191D2A]">
       {/* Table Container with Fixed Height */}
       <div className="overflow-y-auto">
         <table className="w-full">
-          <thead className="bg-gray-50 sticky top-0 z-10">
+          <thead className="bg-gray-50 dark:bg-[#4A4D57] sticky top-0 z-10">
             <tr className="text-right">
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">شماره سفارش</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">تاریخ سفارش</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">مبلغ سفارش</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">کد تحویل</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center">وضعیت سفارش</th>
-              <th className="px-4 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-center w-12"></th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider text-center">شماره سفارش</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider text-center">تاریخ سفارش</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider text-center">مبلغ سفارش</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider text-center">کد تحویل</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider text-center">وضعیت سفارش</th>
+              <th className="px-4 py-3 text-xs font-medium text-gray-500 dark:text-white uppercase tracking-wider text-center w-12"></th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className="bg-white divide-y divide-gray-200 dark:divide-[#494C56]">
             {mockTransactions.map((transaction) => (
               <motion.tr key={transaction.id} layout>
                 <motion.td layout colSpan={6} className="p-0">
-                  <div>
+                  <div className="dark:bg-[#3B3D49]">
                     {/* Main Row */}
                     <div
-                      className="flex items-center px-4 py-4 hover:bg-gray-50 cursor-pointer transition-colors"
+                      className="flex items-center px-4 py-4 dark:bg-[#3B3D49] hover:bg-gray-50 hover:dark:bg-[#34353F] cursor-pointer transition-colors"
                       onClick={() => toggleRow(transaction.id)}
                     >
                       <div className="flex-1 text-center">
-                        <span className="text-sm text-gray-900">{transaction.number}</span>
+                        <span className="text-sm text-gray-900 dark:text-white">{transaction.number}</span>
                       </div>
                       <div className="flex-1 text-center">
-                        <span className="text-sm text-gray-900">{transaction.date}</span>
+                        <span className="text-sm text-gray-900 dark:text-white">{transaction.date}</span>
                       </div>
                       <div className="flex-1 text-center">
-                        <span className="text-sm text-gray-900">{transaction.amount}</span>
+                        <span className="text-sm text-gray-900 dark:text-white">{transaction.amount}</span>
                       </div>
                       <div className="flex-1 text-center">
-                        <span className="text-sm text-gray-900">{transaction.code}</span>
+                        <span className="text-sm text-gray-900 dark:text-white">{transaction.code}</span>
                       </div>
                       <div className="flex-1 text-center">
                         <span
@@ -112,7 +110,7 @@ export function Table() {
                           animate={{ rotate: expandedRow === transaction.id ? 180 : 0 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <IconCaretDown />
+                          <IconCaretDown className="dark:invert"/>
                         </motion.div>
                       </div>
                     </div>
