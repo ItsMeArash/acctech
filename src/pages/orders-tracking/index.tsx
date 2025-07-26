@@ -9,7 +9,6 @@ export default function OrdersTracking() {
     const handleApplyFilters = (filters: any) => {
         setAppliedFilters(filters)
         console.log("Applied filters:", filters)
-        // اینجا می‌تونید فیلترها رو به API ارسال کنید
     }
 
     const handleClearFilters = () => {

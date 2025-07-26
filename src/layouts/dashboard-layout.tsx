@@ -6,7 +6,7 @@ export function DesktopDashboardLayout() {
     return (
         <div className="w-full min-h-screen flex">
             <DesktopNavbar />
-            <div className="w-full flex flex-col gap-4">
+            <div className="w-full flex flex-col">
                 <Header />
                 <Outlet />
             </div>

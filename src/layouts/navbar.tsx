@@ -13,13 +13,13 @@ export function DesktopNavbar() {
 
   return (
     <motion.aside
-      className="bg-[#FFFFFF] border border-gray-200/90 py-6 overflow-hidden"
+      className="bg-[#FFFFFF] dark:bg-[#2B2F3B] border-l border-gray-200/90 dark:border-[#525252] py-6 overflow-hidden"
       initial="expanded"
       animate={isCollapsed ? 'collapsed' : 'expanded'}
       variants={sidebarVariants}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="divide-y divide-gray-300/80 h-full flex flex-col">
+      <div className="divide-y divide-gray-300/80 dark:divide-none h-full flex flex-col">
         <div
           className={`flex items-center pb-4 px-4 ${isCollapsed ? 'justify-center' : 'justify-between'}`}
         >
@@ -27,19 +27,19 @@ export function DesktopNavbar() {
               <motion.img
                 src="/assets/images/logo.png"
                 alt="site logo"
-                className="w-10 h-10"
+                className="w-10 h-10 dark:filter dark:invert dark:brightness-0"
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
               />
-            <p className="text-sm font-bold">نام شرکت یا مجموعه</p>
+            <p className="text-sm dark:text-[#EBEBEB] font-bold">نام شرکت یا مجموعه</p>
           </div>)}
           <button
             className="rounded-full hover:bg-gray-200/90"
             onClick={toggleSidebar}
           >
-            <IconClose />
+            <IconClose className="dark:invert"/>
           </button>
         </div>
         <nav className="pt-4 flex-1">

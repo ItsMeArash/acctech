@@ -95,7 +95,7 @@ export default function FilterComponent({ onApplyFilters, onClearFilters, initia
 
 
   return (
-    <div className="bg-white w-[280px] h-full max-w-sm border-l border-gray-200">
+    <div className="bg-white dark:bg-[#2B2F3B] dark:text-white w-[280px] h-full max-w-sm border-l border-gray-200 dark:border-[#E9EAEB1F]">
       {/* Persistent Header - Always visible */}
       <div
         onClick={togglePanel}
@@ -105,13 +105,13 @@ export default function FilterComponent({ onApplyFilters, onClearFilters, initia
           <span className="font-semibold text-sm">فیلترها</span>
         </div>
         <div className="transform transition-transform duration-300">
-          {isPanelOpen ? <IconClose className="w-5 h-5" /> : <IconCaretDown />}
+          {isPanelOpen ? <IconClose className="w-5 h-5 dark:invert" /> : <IconCaretDown className="dark:invert"/>}
         </div>
       </div>
 
       {/* Animated Filter Panel */}
       <div
-        className={`transition-all duration-300 ease-in-out ${isPanelOpen ? "opacity-100 h-[calc(100%-125px)] overflow-aut border-t border-gray-200" : "max-h-0 opacity-0"
+        className={`transition-all duration-300 ease-in-out ${isPanelOpen ? "opacity-100 h-[calc(100%-125px)] overflow-aut border-t border-gray-200 dark:border-[#E9EAEB1F]" : "max-h-0 opacity-0"
           }`}
       >
         {/* Filter Sections */}
@@ -124,26 +124,26 @@ export default function FilterComponent({ onApplyFilters, onClearFilters, initia
           >
             <div className="space-y-4">
               <div>
-                <label className="block text-sm text-gray-600 mb-2 text-right">از تاریخ</label>
+                <label className="block text-sm text-gray-600 dark:text-[#AEC3FF] mb-2 text-right">از تاریخ</label>
                 <div className="flex gap-2">
                   <input
                     type="text"
                     placeholder="۱۴۰۳/۰۵/۱۴"
                     value={filters.dateTime.fromDate}
                     onChange={(e) => updateFilter("dateTime", "fromDate", e.target.value)}
-                    className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-center text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+                    className="flex-1 px-3 py-2 border border-gray-300 dark:border-[#E9EAEB1F] text-sm placeholder:text-sm rounded-md text-center text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-sm text-gray-600 mb-2 text-right">تا تاریخ</label>
+                <label className="block text-sm text-gray-600 dark:text-[#AEC3FF] mb-2 text-right">تا تاریخ</label>
                 <div className="flex gap-2">
                   <input
                     type="text"
                     placeholder="۱۴۰۳/۰۵/۲۰"
                     value={filters.dateTime.toDate}
                     onChange={(e) => updateFilter("dateTime", "toDate", e.target.value)}
-                    className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-center text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+                    className="flex-1 px-3 py-2 border border-gray-300 dark:border-[#E9EAEB1F] text-sm placeholder:text-sm rounded-md text-center text-sm focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
                   />
                 </div>
               </div>
@@ -161,7 +161,7 @@ export default function FilterComponent({ onApplyFilters, onClearFilters, initia
               placeholder="شماره سفارش را وارد کنید"
               value={filters.orderNumber}
               onChange={(e) => setFilters((prev) => ({ ...prev, orderNumber: e.target.value }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-right focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+              className="w-full px-3 py-2 border border-gray-300 dark:border-[#E9EAEB1F] text-sm placeholder:text-sm rounded-md text-right focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
             />
           </FilterSection>
 
@@ -173,23 +173,23 @@ export default function FilterComponent({ onApplyFilters, onClearFilters, initia
           >
             <div className="space-y-3">
               <div>
-                <label className="block text-sm text-gray-600 mb-1 text-right">حداقل مبلغ</label>
+                <label className="block text-sm text-gray-600 dark:text-[#EBEBEB] mb-1 text-right">حداقل مبلغ</label>
                 <input
                   type="text"
                   placeholder="۰ تومان"
                   value={filters.amount.min}
                   onChange={(e) => updateFilter("amount", "min", e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-right focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-[#E9EAEB1F] text-sm placeholder:text-sm rounded-md text-right focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-600 mb-1 text-right">حداکثر مبلغ</label>
+                <label className="block text-sm text-gray-600 dark:text-[#EBEBEB] mb-1 text-right">حداکثر مبلغ</label>
                 <input
                   type="text"
                   placeholder="۱۰۰۰۰۰۰ تومان"
                   value={filters.amount.max}
                   onChange={(e) => updateFilter("amount", "max", e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-right focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-[#E9EAEB1F] text-sm placeholder:text-sm rounded-md text-right focus:outline-none focus:ring-2 focus:ring-[#1E3A8A]"
                 />
               </div>
             </div>
@@ -221,9 +221,9 @@ export default function FilterComponent({ onApplyFilters, onClearFilters, initia
                           }))
                         }
                       }}
-                      className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-[#1E3A8A]"
+                      className="w-4 h-4 text-purple-600 border-gray-300 dark:border-[#E9EAEB1F] rounded focus:ring-[#1E3A8A]"
                     />
-                    <span className="text-sm text-gray-700">{status}</span>
+                    <span className="text-sm text-gray-70 dark:text-[#EBEBEB]">{status}</span>
                   </label>
                 ),
               )}
@@ -235,13 +235,13 @@ export default function FilterComponent({ onApplyFilters, onClearFilters, initia
         <div className="p-4 text-sm flex gap-3 bottom-0">
           <button
             onClick={handleClearFilters}
-            className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-100 transition-colors font-medium"
+            className="flex-1 px-4 py-2 border border-gray-300 dark:border-[#E9EAEB1F] dark:text-[#D6D6D6] text-gray-700 rounded-md hover:bg-gray-100 transition-colors font-medium"
           >
             حذف فیلترها
           </button>
           <button
             onClick={handleApplyFilters}
-            className="flex-1 px-4 py-2 bg-[#1E3A8A] text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
+            className="flex-1 px-4 py-2 bg-[#1E3A8A] dark:bg-[#6589F0] text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
           >
             اعمال فیلترها
           </button>
@@ -265,12 +265,12 @@ const FilterSection = ({
   <div className="">
     <button
       onClick={onToggle}
-      className="w-full flex items-center justify-between py-4 px-4 text-right hover:bg-gray-50 transition-colors duration-200"
+      className="w-full flex items-center justify-between py-4 px-4 text-right transition-colors duration-200"
     >
-      <span className="text-gray-700 font-medium text-sm">{title}</span>
+      <span className="text-gray-700 dark:text-[#EBEBEB] font-medium text-sm">{title}</span>
       <div className="flex items-center">
         <div className={`transform transition-transform duration-300 ${isExpanded ? "rotate-180" : "rotate-0"}`}>
-          <IconCaretDown className="text-gray-500" />
+          <IconCaretDown className="text-gray-500 dark:invert" />
         </div>
       </div>
     </button>
